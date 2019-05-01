@@ -136,6 +136,7 @@ header{
 		width: 25%;
 	}
 	h1 {
+		font-family: 'Gugi', cursive;
 		font-size: @text-xlarge;
 		margin-left: 20px;
 	}
@@ -160,6 +161,9 @@ header{
 
 .description {
 	.flex-100;
+	@media (max-width: 500px){
+		flex-flow: column nowrap;
+	}
 	flex-flow: row nowrap;
 	margin: 20px 0;
 	h2 {
@@ -174,9 +178,16 @@ header{
 
 	.summary {
 		width: 49%;
+		@media (max-width: 500px){
+			width: 80%;
+			margin-bottom: 20px;
+		}
 	}
 	.skills {
 		width: 49%;
+		@media (max-width: 500px){
+			width: 80%;
+		}
 	}
 
 }
@@ -185,6 +196,7 @@ section h2 {
 }
 .workItem {
 	.flex-100;
+
 	flex-flow: row nowrap;
 	padding: 5px;
 	border-top: 1px solid @butonBackground;
@@ -204,4 +216,12 @@ section h2 {
 }
 .workItemTitle{
 	font-weight: bolder;
+}
+footer{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+	padding: 10px;
+	background: @butonBackground;
+
 }
