@@ -55,6 +55,153 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+// variables
+@text-color: #333333;
+@background-color: #cccccc;
+@font-style: helvetica, arial, sans-serif;
+@text-small: 1rem;
+@text-medium: 1.3rem;
+@text-large: 1.7rem;
+@text-xlarge: 2rem;
+@buttonColor: white;
+@butonBackground: #666666;
+
+// mixins
+
+.flex-100 {
+	display: flex;
+	width: 100%;
+}
+.aButton {
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 7px;
+	background: @butonBackground;
+	color: @buttonColor;
+	width: 15%;
+	text-align: center;
+}
+
+.aButtonHover{
+	color: @butonBackground;
+	background: @buttonColor;
+}
+
+
+.container {
+	width: 85%;
+	margin: 0 auto;
+	font-family: @font-style;
+	font-size: @text-small;
+	@media (max-width: 500px){
+		width: 100%;
+	}
+}
+
+h2 {
+	font-size: @text-large;
+}
+h3 {
+	font-size: @text-medium;
+}
+p {
+	font-size: @text-small;
+}
+
+nav{
+	.flex-100();
+	margin: 15px 0;
+	flex-flow: row nowrap;
+	justify-content: flex-end;
+	a {
+		margin-left: 15px;
+		text-decoration: none;
+		color: @text-color;
+	
+	}
+	
+}
+
+header{
+	.flex-100();
+	flex-flow: column nowrap;
+	background: @background-color;
+
+
+	.mainImage {
+		margin: 30px 0 10px 20px;
+		width: 25%;
+	}
+	h1 {
+		font-size: @text-xlarge;
+		margin-left: 20px;
+	}
+	h3 { 
+		margin: 10px 0 20px 20px;
+	}
+	p {
+		margin: 0 20px 10px 20px;
+		padding-top: 20px;
+		border-top: 1px solid @text-color;
+	}
+	a {
+		.aButton;
+		margin: 10px 0 20px 20px;
+		&:hover {
+			.aButtonHover;
+		}
+	}
+
+
+}
+
+.description {
+	.flex-100;
+	flex-flow: row nowrap;
+	margin: 20px 0;
+	h2 {
+		padding-bottom: 5px;
+		border-bottom: 1px solid @text-color;
+		margin-bottom: 10px;
+		width: 80%;
+	}
+	p{
+		margin: 5px 0;
+	}
+
+	.summary {
+		width: 49%;
+	}
+	.skills {
+		width: 49%;
+	}
+
+}
+section h2 {
+	margin-bottom: 5px;
+}
+.workItem {
+	.flex-100;
+	flex-flow: row nowrap;
+	padding: 5px;
+	border-top: 1px solid @butonBackground;
+
+	.yrs {
+		width: 8%;
+	}
+	.company {
+		width: 25%;
+	}
+	.title {
+		width: 35%;
+	}
+	.tech{
+		width: 30%;
+	}
+}
+.workItemTitle{
+	font-weight: bolder;
+}
