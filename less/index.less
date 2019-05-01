@@ -90,6 +90,7 @@ html, body {
 	background: @buttonColor;
 }
 
+// main code 
 
 .container {
 	width: 85%;
@@ -149,10 +150,10 @@ header{
 		border-top: 1px solid @text-color;
 	}
 	a {
-		.aButton;
+		.aButton();
 		margin: 10px 0 20px 20px;
 		&:hover {
-			.aButtonHover;
+			.aButtonHover();
 		}
 	}
 
@@ -160,7 +161,7 @@ header{
 }
 
 .description {
-	.flex-100;
+	.flex-100();
 	@media (max-width: 500px){
 		flex-flow: column nowrap;
 	}
